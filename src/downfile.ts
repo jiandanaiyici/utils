@@ -16,7 +16,7 @@ export interface Opts<T> {
 export declare const DownTypes: ['json', 'csv', 'xlsx'];
 export type DownType = typeof DownTypes[number];
 
-class Download<T = any>  extends CheckPlatform{
+class DownFile<T = any>  extends CheckPlatform{
   cfg: Opts<T>;
   #filename: string = 'download';
   /** 原始数据 */
@@ -66,12 +66,12 @@ class Download<T = any>  extends CheckPlatform{
     return this.cfg.filename || this.#filename;
   }
 
-  public setFilename(filename: string): Download {
+  public setFilename(filename: string): DownFile {
     this.#filename = filename;
     return this;
   }
 
-  public updateData(newData: T): Download {
+  public updateData(newData: T): DownFile {
     this.data = newData;
     return this;
   }
@@ -90,4 +90,4 @@ class Download<T = any>  extends CheckPlatform{
   }
 }
 
-export default Download;
+export default DownFile;
