@@ -1,20 +1,32 @@
 {
-  "name": "zn-utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jiandanaiyici/utils.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jiandanaiyici/utils/issues"
-  },
-  "homepage": "https://github.com/jiandanaiyici/utils#readme"
+	"name": "zn-utils",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "dumi dev",
+		"build": "father-build",
+		"docs:build": "dumi build",
+		"surge": "npm run docs:build && surge docs-dist --domain zn-utils.surge.sh",
+		"release": "npm run build && npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jiandanaiyici/utils.git"
+	},
+	"keywords": [],
+	"author": "jiandanaiyici",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jiandanaiyici/utils/issues"
+	},
+	"homepage": "https://zn-utils.surge.sh",
+	"devDependencies": {
+		"antd": "^4.8.6",
+		"cross-env": "^7.0.2",
+		"dumi": "^1.0.37",
+		"father": "^2.30.1",
+		"react": "^17.0.1",
+		"typescript": "^4.1.2"
+	}
 }
